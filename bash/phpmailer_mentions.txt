@@ -1,0 +1,138 @@
+./engine/classes/mail/class.phpmailer.php: * PHPMailer - PHP email creation and transport class.
+./engine/classes/mail/class.phpmailer.php: * @see https://github.com/PHPMailer/PHPMailer/ The PHPMailer GitHub project
+./engine/classes/mail/class.phpmailer.php:namespace PHPMailer\PHPMailer;
+./engine/classes/mail/class.phpmailer.php: * PHPMailer - PHP email creation and transport class.
+./engine/classes/mail/class.phpmailer.php:class PHPMailer
+./engine/classes/mail/class.phpmailer.php:     * If empty, PHPMailer attempts to find one with, in order,
+./engine/classes/mail/class.phpmailer.php:     * @see PHPMailer::$Helo
+./engine/classes/mail/class.phpmailer.php:     * Default is $Hostname. If $Hostname is empty, PHPMailer attempts to find
+./engine/classes/mail/class.phpmailer.php:     * @see PHPMailer::$Hostname
+./engine/classes/mail/class.phpmailer.php:     * @see PHPMailer::$Username
+./engine/classes/mail/class.phpmailer.php:     * @see PHPMailer::$Password
+./engine/classes/mail/class.phpmailer.php:     * An implementation of the PHPMailer OAuthTokenProvider interface.
+./engine/classes/mail/class.phpmailer.php:     * By default PHPMailer will use `echo` if run from a `cli` or `cli-server` SAPI, `html` otherwise.
+./engine/classes/mail/class.phpmailer.php:     * @deprecated 6.0.0 PHPMailer isn't a mailing list manager!
+./engine/classes/mail/class.phpmailer.php:     * Options: An empty string for PHPMailer default, whitespace/null for none, or a string to use.
+./engine/classes/mail/class.phpmailer.php:     * @see PHPMailer::validateAddress()
+./engine/classes/mail/class.phpmailer.php:     * @see PHPMailer::$to
+./engine/classes/mail/class.phpmailer.php:     * @see PHPMailer::$cc
+./engine/classes/mail/class.phpmailer.php:     * @see PHPMailer::$bcc
+./engine/classes/mail/class.phpmailer.php:     * @see PHPMailer::$to
+./engine/classes/mail/class.phpmailer.php:     * @see PHPMailer::$cc
+./engine/classes/mail/class.phpmailer.php:     * @see PHPMailer::$bcc
+./engine/classes/mail/class.phpmailer.php:     * @see PHPMailer::$all_recipients
+./engine/classes/mail/class.phpmailer.php:     * @see PHPMailer::$ReplyTo
+./engine/classes/mail/class.phpmailer.php:     * The PHPMailer Version number.
+./engine/classes/mail/class.phpmailer.php:     * @see PHPMailer::$Debugoutput
+./engine/classes/mail/class.phpmailer.php:     * @see PHPMailer::$SMTPDebug
+./engine/classes/mail/class.phpmailer.php:     * Add an address to one of the recipient arrays or to the ReplyTo array. Because PHPMailer
+./engine/classes/mail/class.phpmailer.php:     * can't validate addresses with an IDN without knowing the PHPMailer::$CharSet (that can still
+./engine/classes/mail/class.phpmailer.php:        //Enqueue addresses with IDN until we know the PHPMailer::$CharSet.
+./engine/classes/mail/class.phpmailer.php:     * PHPMailer::validateAddress('user@example.com', function($address) {
+./engine/classes/mail/class.phpmailer.php:     * You can also set the PHPMailer::$validator static to a callable, allowing built-in methods to use your validator.
+./engine/classes/mail/class.phpmailer.php:     * Important: Address must be passed in same encoding as currently set in PHPMailer::$CharSet.
+./engine/classes/mail/class.phpmailer.php:     * @see PHPMailer::$CharSet
+./engine/classes/mail/class.phpmailer.php:     * @see PHPMailer::$Sendmail
+./engine/classes/mail/class.phpmailer.php:            //<https://github.com/PHPMailer/PHPMailer/issues/2298>), and
+./engine/classes/mail/class.phpmailer.php:     * @see https://github.com/PHPMailer/PHPMailer/issues/924 CVE-2016-10045 bug report
+./engine/classes/mail/class.phpmailer.php:     * @see PHPMailer::setSMTPInstance() to use a different class.
+./engine/classes/mail/class.phpmailer.php:     * @uses \PHPMailer\PHPMailer\SMTP
+./engine/classes/mail/class.phpmailer.php:     * @uses \PHPMailer\PHPMailer\SMTP
+./engine/classes/mail/class.phpmailer.php:                'PHPMailer ' . self::VERSION . ' (https://github.com/PHPMailer/PHPMailer)'
+./engine/classes/mail/class.phpmailer.php:     * @see PHPMailer::preSend()
+./engine/classes/mail/class.phpmailer.php:     * PHPMailer only supports some preset message types, not arbitrary MIME structures.
+./engine/classes/mail/class.phpmailer.php:     * Explicitly *does not* support passing URLs; PHPMailer is not an HTTP client.
+./engine/classes/mail/class.phpmailer.php:     *                            PHPMailer will attempt to set a MIME type for the attachment.
+./engine/classes/mail/class.phpmailer.php:                //but it's usually not PHPMailer's fault.
+./engine/classes/mail/class.phpmailer.php:                return $this->language[$key] . ' https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting';
+./engine/classes/mail/class.phpmailer.php:     * @see PHPMailer::html2text()
+./engine/classes/mail/exception.php: * PHPMailer Exception class.
+./engine/classes/mail/exception.php: * @see       https://github.com/PHPMailer/PHPMailer/ The PHPMailer GitHub project
+./engine/classes/mail/exception.php:namespace PHPMailer\PHPMailer;
+./engine/classes/mail/exception.php: * PHPMailer exception handler.
+./engine/classes/mail/smtp.php: * PHPMailer RFC821 SMTP email transport class.
+./engine/classes/mail/smtp.php: * @see       https://github.com/PHPMailer/PHPMailer/ The PHPMailer GitHub project
+./engine/classes/mail/smtp.php:namespace PHPMailer\PHPMailer;
+./engine/classes/mail/smtp.php: * PHPMailer RFC821 SMTP email transport class.
+./engine/classes/mail/smtp.php:     * The PHPMailer SMTP version number.
+./engine/classes/mail.class.php:use PHPMailer\PHPMailer\PHPMailer;
+./engine/classes/mail.class.php:use PHPMailer\PHPMailer\SMTP;
+./engine/classes/mail.class.php:use PHPMailer\PHPMailer\Exception;
+./engine/classes/mail.class.php:		$this->mail = new PHPMailer(true);
+./engine/modules/uniform/crm/crm-obnoviti-demo.php:use PHPMailer\PHPMailer\PHPMailer;
+./engine/modules/uniform/crm/crm-obnoviti-demo.php:use PHPMailer\PHPMailer\SMTP;
+./engine/modules/uniform/crm/crm-obnoviti-demo.php:use PHPMailer\PHPMailer\Exception;
+./engine/modules/uniform/crm/crm-obnoviti-demo.php:// Условное подключение классов PHPMailer
+./engine/modules/uniform/crm/crm-obnoviti-demo.php:if (!class_exists('PHPMailer\PHPMailer\Exception')) {
+./engine/modules/uniform/crm/crm-obnoviti-demo.php:if (!class_exists('PHPMailer\PHPMailer\PHPMailer')) {
+./engine/modules/uniform/crm/crm-obnoviti-demo.php:    require_once '/var/www/p547388/data/www/alto-group.com/engine/modules/uniform/crm/src/PHPMailer.php';
+./engine/modules/uniform/crm/crm-obnoviti-demo.php:if (!class_exists('PHPMailer\PHPMailer\SMTP')) {
+./engine/modules/uniform/crm/crm-obnoviti-demo.php:$mail = new PHPMailer;
+./engine/modules/uniform/crm/crm-obnoviti-demo.php:// Настройки PHPMailer
+./engine/modules/uniform/crm/src/Exception.php: * PHPMailer Exception class.
+./engine/modules/uniform/crm/src/Exception.php: * @see       https://github.com/PHPMailer/PHPMailer/ The PHPMailer GitHub project
+./engine/modules/uniform/crm/src/Exception.php:namespace PHPMailer\PHPMailer;
+./engine/modules/uniform/crm/src/Exception.php: * PHPMailer exception handler.
+./engine/modules/uniform/crm/src/OAuth.php: * PHPMailer - PHP email creation and transport class.
+./engine/modules/uniform/crm/src/OAuth.php: * @see       https://github.com/PHPMailer/PHPMailer/ The PHPMailer GitHub project
+./engine/modules/uniform/crm/src/OAuth.php:namespace PHPMailer\PHPMailer;
+./engine/modules/uniform/crm/src/PHPMailer.php: * PHPMailer - PHP email creation and transport class.
+./engine/modules/uniform/crm/src/PHPMailer.php: * @see https://github.com/PHPMailer/PHPMailer/ The PHPMailer GitHub project
+./engine/modules/uniform/crm/src/PHPMailer.php:namespace PHPMailer\PHPMailer;
+./engine/modules/uniform/crm/src/PHPMailer.php: * PHPMailer - PHP email creation and transport class.
+./engine/modules/uniform/crm/src/PHPMailer.php:class PHPMailer
+./engine/modules/uniform/crm/src/PHPMailer.php:     * If empty, PHPMailer attempts to find one with, in order,
+./engine/modules/uniform/crm/src/PHPMailer.php:     * @see PHPMailer::$Helo
+./engine/modules/uniform/crm/src/PHPMailer.php:     * Default is $Hostname. If $Hostname is empty, PHPMailer attempts to find
+./engine/modules/uniform/crm/src/PHPMailer.php:     * @see PHPMailer::$Hostname
+./engine/modules/uniform/crm/src/PHPMailer.php:     * @see PHPMailer::$Username
+./engine/modules/uniform/crm/src/PHPMailer.php:     * @see PHPMailer::$Password
+./engine/modules/uniform/crm/src/PHPMailer.php:     * An instance of the PHPMailer OAuth class.
+./engine/modules/uniform/crm/src/PHPMailer.php:     * By default PHPMailer will use `echo` if run from a `cli` or `cli-server` SAPI, `html` otherwise.
+./engine/modules/uniform/crm/src/PHPMailer.php:     * @deprecated 6.0.0 PHPMailer isn't a mailing list manager!
+./engine/modules/uniform/crm/src/PHPMailer.php:     * Options: An empty string for PHPMailer default, whitespace/null for none, or a string to use.
+./engine/modules/uniform/crm/src/PHPMailer.php:     * @see PHPMailer::validateAddress()
+./engine/modules/uniform/crm/src/PHPMailer.php:     * @see PHPMailer::$to
+./engine/modules/uniform/crm/src/PHPMailer.php:     * @see PHPMailer::$cc
+./engine/modules/uniform/crm/src/PHPMailer.php:     * @see PHPMailer::$bcc
+./engine/modules/uniform/crm/src/PHPMailer.php:     * @see PHPMailer::$to
+./engine/modules/uniform/crm/src/PHPMailer.php:     * @see PHPMailer::$cc
+./engine/modules/uniform/crm/src/PHPMailer.php:     * @see PHPMailer::$bcc
+./engine/modules/uniform/crm/src/PHPMailer.php:     * @see PHPMailer::$all_recipients
+./engine/modules/uniform/crm/src/PHPMailer.php:     * @see PHPMailer::$ReplyTo
+./engine/modules/uniform/crm/src/PHPMailer.php:     * The PHPMailer Version number.
+./engine/modules/uniform/crm/src/PHPMailer.php:     * @see PHPMailer::$Debugoutput
+./engine/modules/uniform/crm/src/PHPMailer.php:     * @see PHPMailer::$SMTPDebug
+./engine/modules/uniform/crm/src/PHPMailer.php:     * Add an address to one of the recipient arrays or to the ReplyTo array. Because PHPMailer
+./engine/modules/uniform/crm/src/PHPMailer.php:     * can't validate addresses with an IDN without knowing the PHPMailer::$CharSet (that can still
+./engine/modules/uniform/crm/src/PHPMailer.php:        //Enqueue addresses with IDN until we know the PHPMailer::$CharSet.
+./engine/modules/uniform/crm/src/PHPMailer.php:     * PHPMailer::validateAddress('user@example.com', function($address) {
+./engine/modules/uniform/crm/src/PHPMailer.php:     * You can also set the PHPMailer::$validator static to a callable, allowing built-in methods to use your validator.
+./engine/modules/uniform/crm/src/PHPMailer.php:     * Important: Address must be passed in same encoding as currently set in PHPMailer::$CharSet.
+./engine/modules/uniform/crm/src/PHPMailer.php:     * @see PHPMailer::$CharSet
+./engine/modules/uniform/crm/src/PHPMailer.php:     * @see PHPMailer::$Sendmail
+./engine/modules/uniform/crm/src/PHPMailer.php:            //<https://github.com/PHPMailer/PHPMailer/issues/2298>), and
+./engine/modules/uniform/crm/src/PHPMailer.php:     * @see https://github.com/PHPMailer/PHPMailer/issues/924 CVE-2016-10045 bug report
+./engine/modules/uniform/crm/src/PHPMailer.php:     * @see PHPMailer::setSMTPInstance() to use a different class.
+./engine/modules/uniform/crm/src/PHPMailer.php:     * @uses \PHPMailer\PHPMailer\SMTP
+./engine/modules/uniform/crm/src/PHPMailer.php:     * @uses \PHPMailer\PHPMailer\SMTP
+./engine/modules/uniform/crm/src/PHPMailer.php:                'PHPMailer ' . self::VERSION . ' (https://github.com/PHPMailer/PHPMailer)'
+./engine/modules/uniform/crm/src/PHPMailer.php:     * @see PHPMailer::preSend()
+./engine/modules/uniform/crm/src/PHPMailer.php:     * PHPMailer only supports some preset message types, not arbitrary MIME structures.
+./engine/modules/uniform/crm/src/PHPMailer.php:     * Explicitly *does not* support passing URLs; PHPMailer is not an HTTP client.
+./engine/modules/uniform/crm/src/PHPMailer.php:     *                            PHPMailer will attempt to set a MIME type for the attachment.
+./engine/modules/uniform/crm/src/PHPMailer.php:                //but it's usually not PHPMailer's fault.
+./engine/modules/uniform/crm/src/PHPMailer.php:                return $this->language[$key] . ' https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting';
+./engine/modules/uniform/crm/src/PHPMailer.php:     * @see PHPMailer::html2text()
+./engine/modules/uniform/crm/src/POP3.php: * PHPMailer POP-Before-SMTP Authentication Class.
+./engine/modules/uniform/crm/src/POP3.php: * @see https://github.com/PHPMailer/PHPMailer/ The PHPMailer GitHub project
+./engine/modules/uniform/crm/src/POP3.php:namespace PHPMailer\PHPMailer;
+./engine/modules/uniform/crm/src/POP3.php: * PHPMailer POP-Before-SMTP Authentication Class.
+./engine/modules/uniform/crm/src/POP3.php: * Specifically for PHPMailer to use for RFC1939 POP-before-SMTP authentication.
+./engine/modules/uniform/crm/src/POP3.php:     * The POP3 PHPMailer Version number.
+./engine/modules/uniform/crm/src/SMTP.php: * PHPMailer RFC821 SMTP email transport class.
+./engine/modules/uniform/crm/src/SMTP.php: * @see       https://github.com/PHPMailer/PHPMailer/ The PHPMailer GitHub project
+./engine/modules/uniform/crm/src/SMTP.php:namespace PHPMailer\PHPMailer;
+./engine/modules/uniform/crm/src/SMTP.php: * PHPMailer RFC821 SMTP email transport class.
+./engine/modules/uniform/crm/src/SMTP.php:     * The PHPMailer SMTP version number.
+./main.py:                        if 'PHPMailer' in line or 'require' in line or 'include' in line:
